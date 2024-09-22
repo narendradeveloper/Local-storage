@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+       body{
+            color: #1b1717;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            font-size: large;
+            margin: auto;
+            padding: 10px;
+            
+        }
+        input{
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            height: 3vh;
+            margin: auto;
+            width: 40vh;
+           
+        }
+        button:hover{
+            background-color: rgb(147, 223, 147);
+            cursor: pointer;
+        }
+         form{
+            background-color: rgb(162, 204, 166);
+            width: 70vh;
+            height:80vh;
+            text-align: center;
+            margin-right: 100px;
+            border: 3px solid rgb(168, 145, 145);
+            padding: 20px;
+        } 
+       
+    </style>
+  </head>
+  <body>
+     </style>
+    <h2> this form out put check in local storage</h2>
+    <form id="myid">
+        <label> 10000 Coders institute student details</label><br>
+     <label for="name">Name:</label>
+      <input type="text" id="name" ><br />
+      
+      <label for="email">Email:</label>
+      <input type="email" id="email"><br>
+
+      <label for="tel">Phone No:</label>
+      <input type="number" id="number"><br>
+
+      <label for="lead">Your lead:</label>
+      <input type="text" id="lead"><br>
+
+      <label for="pm">Program maneger:</label>
+      <input type="text" id="pm"><br>
+
+      <label for="trainer">Trainer:</label>
+      <input type="text" id="trainer"><br>
+
+      <button type="submit">Submit</button>
+    </form>
+    <script>
+     let myid= document.getElementById("myid").addEventListener('submit',() =>{
+        const name = document.getElementById('name').value;
+        const email=document.getElementById("email").value;
+        const number=document.getElementById("number").value;
+        const lead=document.getElementById("lead").value;
+        const pm=document.getElementById("pm").value;
+        const trainer=document.getElementById("trainer").value;
+
+
+
+        localStorage.setItem('name',name);
+        localStorage.setItem("email",email);
+        localStorage.setItem("number",number);
+        localStorage.setItem("lead",lead);
+        localStorage.setItem("pm",pm);
+        localStorage.setItem("trainer",trainer);
+      });
+    </script>
+  </body>
+</html>
